@@ -1,0 +1,47 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int i,even=0,odd=0;
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+		
+		int[] elements = new int[size];
+		System.out.println("Enter the elements of array");
+		for(i=0;i<size;i++)
+		{
+		    elements[i]=sc.nextInt();
+		}
+		
+		System.out.println("Enter the choice 1 or 2");
+		System.out.println("1. Sum of all the elements");
+		System.out.println("2. Sum of alternative elements");
+		int sum=0;
+		int total=0;
+		int choice = sc.nextInt();
+		
+    	switch(choice)
+    	{
+	    case 1:
+	        for(i=0;i<size;i++)
+	        {
+	        sum=sum+elements[i];
+	        }
+	        System.out.println("Sum of all the elements: " +sum);
+	        break;
+	    case 2:
+	        for(i=0;i<size;i++)
+	        {
+	            total=total+elements[i];
+	            i=i+1;
+	        }
+	        System.out.println("Sum of alternative elements: " +total);
+	        break;
+	        
+	        default:
+	        System.out.println("Error");
+    	}
+	}	
+}

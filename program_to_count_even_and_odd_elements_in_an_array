@@ -1,0 +1,50 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) 
+	{
+	    int i,even=0,odd=0;
+	    Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the size of array");
+		int size = sc.nextInt();
+		
+		int[] elements = new int[size];
+		System.out.println("Enter the elements of array");
+		for(i=0;i<size;i++)
+		{
+		    elements[i]=sc.nextInt();
+		}
+		
+		for(i=0;i<size;i++)
+		{
+		    if(elements[i]%2==0)
+		    even++;
+		    else
+		    odd++;
+		}
+		
+		System.out.println("Number of even elements: " +even);
+		System.out.println("Number of odd elements: " +odd);
+		
+		int[] evenArray = new int[even];
+		int[] oddArray = new int[odd];
+		int j=0,k=0;
+		
+		for(i=0;i<size;i++)
+		{
+		    if(elements[i]%2==0)
+		    evenArray[j++]=elements[i];
+		    else
+		    oddArray[k++]=elements[i];
+		}
+		
+		System.out.println("Even Array");
+                             for(i=0;i<even;i++) 
+		System.out.print(" " +evenArray[i]);
+		
+		System.out.println("\nodd Array");
+		for(i=0;i<odd;i++)
+		System.out.print(" " +oddArray[i]);
+		
+	}
+}

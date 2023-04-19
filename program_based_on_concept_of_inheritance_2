@@ -1,0 +1,43 @@
+import java.util.*;
+class Vehicle{
+public void Display()
+{
+System.out.println("this is a vehical");
+}
+}
+class Car extends Vehicle
+{
+public void Display()
+{
+System.out.println("this is car");
+}
+}
+
+FOCP II Lab Manual (CSL 108)
+2022-2023
+
+class Bike extends Vehicle
+{
+public void Display()
+{
+System.out.println("this is bike");
+}
+}
+class MakeObject
+{
+public static void main(String [] args){
+Scanner sc=new Scanner(System.in);
+System.out.println("enter the number of wheels in vehicle ");
+int N = sc.nextInt();
+if(N==2)
+{
+Bike ob = new Bike();
+ob.Display();
+}
+else if(N==4)
+{
+Car ob1=new Car();
+ob1.Display();
+}
+}
+}

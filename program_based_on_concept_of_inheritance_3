@@ -1,0 +1,78 @@
+import java.util.Scanner;
+class Box {
+float width, height, depth;
+public Box(float w, float h, float d) {
+width = w;
+height = h;
+depth = d;
+}
+public void setWidth(float w) {
+width = w;
+}
+public void setHeight(float h) {
+height = h;
+}
+public void setDepth(float d) {
+depth = d;
+}
+public float getWidth() {
+return width;
+}
+
+FOCP II Lab Manual (CSL 108)
+2022-2023
+
+public float getHeight() {
+return height;
+}
+public float getDepth() {
+return depth;
+}
+public void displayVolume() {
+System.out.println("Volume of Box: " + width * height * depth);
+}
+}
+class BoxWeight extends Box {
+private float weight;
+public BoxWeight(float w, float h, float d, float wt) {
+super(w, h, d);
+weight = wt;
+}
+public void setWeight(float wt) {
+weight = wt;
+}
+public float getWeight() {
+return weight;
+}
+public void displayWeight() {
+System.out.println("Weight of Box: " + weight);
+}
+}
+public class BoxWeightDemo{
+
+FOCP II Lab Manual (CSL 108)
+2022-2023
+
+public static void main(String[] args) {
+Scanner sc = new Scanner(System.in);
+
+System.out.print("Enter width: ");
+float width = sc.nextFloat();
+
+System.out.print("Enter height: ");
+float height = sc.nextFloat();
+
+System.out.print("Enter depth: ");
+float depth = sc.nextFloat();
+
+System.out.print("Enter weight: ");
+float weight = sc.nextFloat();
+
+BoxWeight bw = new BoxWeight(width, height, depth, weight);
+
+bw.displayVolume();
+bw.displayWeight();
+
+sc.close();
+}
+}

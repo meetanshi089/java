@@ -1,0 +1,38 @@
+class Shape {
+void sh()
+{
+System.out.println("This is shape ");
+}
+}
+class Rectangle extends Shape {
+void rec()
+{
+System.out.println("This is rectangle ");
+}
+}
+class Circel extends Shape{
+void ci()
+{
+System.out.println("This is circel");
+}
+}
+class Square extends Rectangle{
+void sq()
+{
+System.out.println("Square is Rectangle");
+}
+}
+
+class TestInheritance3{
+
+FOCP II Lab Manual (CSL 108)
+2022-2023
+
+public static void main(String args[])
+{
+Square obj = new Square();
+obj.sh();
+obj.rec();
+
+}
+}

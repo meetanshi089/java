@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Student {
+String name;
+int roll_no;
+
+public Student(String name, int roll_no) {
+this.name = name;
+this.roll_no = roll_no;
+}
+
+public static void main(String[] args) {
+Scanner input = new Scanner(System.in);
+System.out.print("Enter student name: ");
+String name = input.nextLine();
+System.out.print("Enter student roll number: ");
+int roll_no = input.nextInt();
+Student student = new Student(name, roll_no);
+System.out.printf("Student %s has roll number %d\n", student.name, student.roll_no);
+}
+}

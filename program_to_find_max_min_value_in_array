@@ -1,0 +1,32 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int count, max, min, i;
+        int[] inp = new int[500];
+   
+        Scanner in = new Scanner(System.in);
+        //take the input of array size by the user
+        System.out.println("Enter number of elements");
+        count = in.nextInt();
+        //enter the array elements by the user
+        System.out.println("Enter " + count + " elements");
+         
+        for(i = 0; i < count; i++) {
+            inp[i] = in.nextInt();
+        }
+   
+        max = min = inp[0];
+         
+        for(i = 1; i < count; i++) {
+            if(inp[i] > max)
+                max = inp[i];
+            else if (inp[i] < min)
+                min = inp[i];
+                
+        }
+        //print the largest and smallest number of array 
+        System.out.println("Largest Number : " + max);
+        System.out.println("Smallest Number : " + min);
+    }
+}
